@@ -186,65 +186,39 @@ public class LostAndFoundSystem {
         
         Scanner scanner = new Scanner(System.in);
 
-        String foundItem = "", foundPlace = "", foundMarks = "", foundStatus = "NO REPORT";
-        String claimantName = "", claimantContact = "", claimDetails = "", claimStatus = "NO CLAIM REQUEST";
-        String answer;
+    String name, college, progAndSec;
+    String claimedItem, claimingDate;
 
+    System.out.println("\n===== CLAIM AN ITEM =====");
+    System.out.println("Would you like to claim an item?");
+    System.out.println("Please fill in the details below.");
+    System.out.println("=====================================================");
 
-        System.out.println("\n===== CLAIM AN ITEM =====");
+    System.out.print("Name: ");
+    name = scanner.nextLine();
 
-        if (foundStatus.equals("NO REPORT")){
-            System.out.println("No found item has been reported yet.");
-            return;
-        }
+    System.out.print("College: ");
+    college = scanner.nextLine();
 
-        if (foundStatus.equals("CLAIM REQUESTED")) {
-            System.out.println("A claim request already exists.");
-            System.out.println("Status: " + claimStatus);
-            return;
-        }
+    System.out.print("Program and Section: ");
+    progAndSec = scanner.nextLine();
 
-        if (foundStatus.equals("CLAIMED")) {
-            System.out.println("This item has already been claimed.");
-            return;
-        }
+    System.out.print("Claimed Item: ");
+    claimedItem = scanner.nextLine();
 
-        System.out.println("Item: " + foundItem);
-        System.out.println("Place found: " + foundPlace);
-        System.out.println("Distinguishing marks/Features of the items : " + foundMarks);
+    System.out.print("Date of Claiming the Item: ");
+    claimingDate = scanner.nextLine();
 
-        System.out.print("Is this your item? (yes/no): ");
-        answer = scanner.nextLine();
-
-        if (answer.equalsIgnoreCase("yes")) {
-
-            System.out.print("Your full name: ");
-            claimantName = scanner.nextLine();
-
-            System.out.print("Your contact number: ");
-            claimantContact = scanner.nextLine();
-
-            System.out.print("Details to prove ownership: ");
-            claimDetails = scanner.nextLine();
-
-            foundStatus = "CLAIM REQUESTED";
-            claimStatus = "WAITING FOR STAFF VERIFICATION";
-
-            System.out.println("\nClaim request submitted!");
-            System.out.println("Claimant: " + claimantName);
-            System.out.println("Item: " + foundItem);
-            System.out.println("Status: " + claimStatus);
-            System.out.println("Please coordinate with the Local Student Council.");
-
-        } else if (answer.equalsIgnoreCase("no")) {
-
-            System.out.println("Claim cancelled.");
-
-        } else {
-
-            System.out.println("Invalid answer. Please enter yes or no.");
-        }
-    }
+    System.out.println("\n===== CLAIM REQUEST SUBMITTED =====");
+    System.out.println("Name: " + name);
+    System.out.println("College: " + college);
+    System.out.println("Program and Section: " + progAndSec);
+    System.out.println("Claimed Item: " + claimedItem);
+    System.out.println("Date of Claiming: " + claimingDate);
+    System.out.println("Status: WAITING FOR VERIFICATION");
+    System.out.println("Please coordinate with the Local Student Council.");
+    System.out.println("=====================================================");
+}
 
     
 
