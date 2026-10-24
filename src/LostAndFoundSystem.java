@@ -5,7 +5,7 @@ public class LostAndFoundSystem {
 
    
 
-    public void chooseOption(int choice){
+    public static void chooseOption(int choice){
 
         Scanner scanner = new Scanner(System.in);
 
@@ -464,7 +464,7 @@ public class LostAndFoundSystem {
         System.out.println("Thank you and have a great day!");
     }
 
-    public  void main(String[] args){
+    public static void main(String[] args){
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("=====================================================");
