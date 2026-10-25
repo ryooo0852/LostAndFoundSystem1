@@ -206,7 +206,7 @@ public class LostAndFoundSystem {
     System.out.print("Claimed Item: ");
     claimedItem = scanner.nextLine();
 
-    System.out.print("Date of Claiming the Item: ");
+    System.out.print("Date and Time of Claiming the Item: ");
     claimingDate = scanner.nextLine();
 
     System.out.println("\n===== CLAIM REQUEST SUBMITTED =====");
@@ -219,9 +219,7 @@ public class LostAndFoundSystem {
     System.out.println("Please coordinate with the Local Student Council.");
     System.out.println("=====================================================");
 }
-
     
-
     public static void seeItemStatus(){
 
     String foundItem = "", foundPlace = "", foundMarks = "", foundStatus = "NO REPORT", foundName = "";
